@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepe - Female Reproductive System 🌸 Interactive Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== ROOT VARIABLES ==================== */
+        :root {
+            --primary: #fb923c; /* orange-400 */
+            --primary-light: #fed7aa; /* orange-200 */
+            --primary-dark: #f97316; /* orange-500 */
+            --secondary: #ea580c; /* orange-600 */
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ==================== GLOBAL STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ==================== SLIDES CONTAINER ==================== */
+        .slides-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        /* ==================== SLIDE STYLES ==================== */
+        .slide {
+            width: 100%;
+            background: #ffffff;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            padding: 40px;
+            overflow: hidden;
+            border-radius: 24px;
+            border-top: 8px solid;
+            border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+            height: auto;
+            min-height: auto;
+        }
+        
+        .slide::after {
+            content: 'Prepe';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.03);
+            z-index: 1;
+            pointer-events: none;
+            text-transform: uppercase;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-light);
+            background-color: #f1f5f9;
+            padding: 5px 15px;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        /* ==================== HEADER ==================== */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 35px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary-dark);
+        }
+        
+        .slide-title {
+            font-size: 46px;
+            font-weight: 900;
+            color: var(--text-dark);
+            text-align: right;
+            position: relative;
+            padding-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--secondary), var(--primary));
+            border-radius: 2px;
+        }
+
+        /* ==================== CONTENT AREA ==================== */
+        .slide-content {
+            flex-grow: 1;
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-column {
+            flex-basis: 65%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .side-column {
+            flex-basis: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ==================== TYPOGRAPHY ==================== */
+        h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 20px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: '✨';
+            margin-right: 10px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 18px;
+        }
+
+        .main-column > ul > li {
+            background-color: #f9fafb;
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.2s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .main-column > ul > li:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .point-title {
+            font-weight: 700;
+            font-size: 21px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .point-title .icon {
+            margin-right: 12px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .point-desc,
+        .point-list {
+            font-size: 18px;
+            color: var(--text-medium);
+            padding-left: 36px;
+            line-height: 1.7;
+        }
+
+        .point-list li {
+            margin-bottom: 10px;
+            padding-left: 8px;
+            position: relative;
+        }
+
+        .point-list li::before {
+            content: '▸';
+            position: absolute;
+            left: -12px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .point-example {
+            font-style: italic;
+            font-size: 17px;
+            color: var(--text-light);
+            margin-top: 10px;
+            padding: 12px 16px;
+            border-left: 4px solid var(--primary);
+            background: #fffbeb;
+            border-radius: 8px;
+        }
+
+        .point-example::before {
+            content: '💡';
+            margin-right: 8px;
+        }
+
+        /* ==================== INFO CARDS ==================== */
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .info-card.grow {
+            flex-grow: 1;
+        }
+
+        .info-card h4 {
+            margin: 0 0 15px 0;
+            font-size: 22px;
+            color: var(--text-dark);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-card h4::before {
+            content: '🔖';
+            margin-right: 10px;
+        }
+
+        .info-card p,
+        .info-card ul {
+            margin: 0;
+            font-size: 17px;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* ==================== TABLES ==================== */
+        .mini-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .mini-table th,
+        .mini-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 14px;
+            text-align: left;
+        }
+        
+        .mini-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .mini-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 15px;
+        }
+
+        .mini-table tbody tr:hover {
+            background: #fff7ed;
+        }
+
+        .mini-table tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        /* ==================== BADGES ==================== */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background-color: var(--primary-light);
+            border: 1px solid var(--primary);
+            color: var(--secondary);
+            padding: 12px 8px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .badge:hover {
+            transform: scale(1.05);
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ==================== TIMELINE ==================== */
+        .timeline {
+            border-left: 3px solid var(--primary);
+            padding-left: 25px;
+            margin-top: 15px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid #fff;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 19px;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            font-size: 17px;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOW CHART ==================== */
+        .flow-chart {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .flow-step {
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            background: #f9fafb;
+            padding: 15px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            min-width: 100px;
+        }
+
+        .flow-step:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .flow-arrow {
+            font-size: 30px;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* ==================== FOOTER TAGS ==================== */
+        .slide-footer {
+            display: flex;
+            gap: 12px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+            flex-shrink: 0;
+            width: 100%;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-tag {
+            background-color: var(--primary-light);
+            color: var(--secondary);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .footer-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ==================== HERO SLIDE ==================== */
+        .hero-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .hero-title {
+            font-size: 85px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 30px;
+            color: var(--secondary);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .hero-tile {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .hero-tile:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .hero-tile h3 {
+            color: var(--primary-dark);
+            border: none;
+            padding: 0;
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .hero-tile p {
+            margin: 0;
+            font-size: 18px;
+            color: var(--text-medium);
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        /* ==================== STAT BOXES ==================== */
+        .stat-box {
+            background: #f9fafb;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-medium);
+            font-weight: 600;
+        }
+
+        /* ==================== QUICK FACT BOX ==================== */
+        .quick-fact {
+            background: #fffbeb;
+            border-left: 5px solid #facc15;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .quick-fact::before {
+            content: '⚡';
+            font-size: 20px;
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            color: #ca8a04;
+        }
+
+        .quick-fact strong {
+            color: #a16207;
+            font-weight: 800;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1100px) {
+            .slide {
+                padding: 30px 25px;
+            }
+            .slide-content {
+                flex-direction: column;
+            }
+            .main-column,
+            .side-column {
+                flex-basis: auto;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .slides-container {
+                padding: 20px 10px;
+            }
+            .slide {
+                padding: 25px 20px;
+            }
+             .slide::after {
+                font-size: 120px;
+            }
+            .slide-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                margin-bottom: 25px;
+            }
+            .brand {
+                font-size: 30px;
+            }
+            .slide-title {
+                font-size: 32px;
+                text-align: left;
+            }
+            .slide-title::after {
+                left: 0;
+                right: auto;
+            }
+            .hero-grid,
+            .slide-content[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+            h3 { font-size: 24px; }
+            .point-title { font-size: 19px; }
+            .point-list { font-size: 16px; padding-left: 25px;}
+            .info-card h4 { font-size: 20px; }
+            .info-card p, .info-card ul { font-size: 16px; }
+            .hero-title { font-size: 50px; }
+            .hero-subtitle { font-size: 22px; }
+            .hero-tile h3 { font-size: 22px; }
+            .hero-tile p { font-size: 16px; }
+            .mini-table {
+                font-size: 14px;
+            }
+            .mini-table th, .mini-table td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slides-container {
+                padding: 15px 5px;
+            }
+            .slide {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+             .slide::after {
+                font-size: 90px;
+            }
+            .slide-title { font-size: 28px; }
+            .hero-title { font-size: 40px; }
+            .hero-subtitle { font-size: 18px; }
+            .final-slide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ==================== FINAL SLIDE ==================== */
+        .final-slide {
+            background: linear-gradient(135deg, #f5f3ff, #fdf2f8);
+            border-image: linear-gradient(90deg, #6d28d9, #db2777) 1;
+            text-align: center;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .final-slide-content {
+            max-width: 900px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .final-slide h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #6d28d9;
+            margin-bottom: 8px;
+        }
+
+        .final-slide h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            border: none;
+            padding: 0;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: block;
+        }
+        
+        .final-slide h3::before {
+            content: none;
+        }
+
+        .final-slide p {
+            font-size: 20px;
+            color: var(--text-medium);
+            margin-bottom: 40px;
+        }
+
+        .final-slide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .final-slide-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .final-slide-box:hover {
+            transform: translateY(-12px);
+            border-color: #6d28d9;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .final-slide-box .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .final-slide-box .icon.offer { background-color: #dcfce7; color: #22c55e; }
+        .final-slide-box .icon.courses { background-color: #e0f2fe; color: #0ea5e9; }
+        .final-slide-box .icon.insta { background-color: #fdf2f8; color: #db2777; }
+
+        .final-slide-box.insta-box h4 { color: #db2777; }
+        .final-slide-box:hover h4 { color: var(--text-dark); }
+        .final-slide-box:hover span { color: var(--text-light); }
+        .final-slide-box.insta-box:hover h4 { color: #db2777; }
+        
+        .final-slide-box h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0;
+        }
+        
+        .final-slide-box h4::before { content: none; }
+        .final-slide-box span { font-size: 16px; color: var(--text-light); font-weight: 500; }
+
+        .final-slide-divider {
+            width: 80%;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, var(--border-color), var(--border-color) 6px, transparent 6px, transparent 12px);
+            margin: 0 auto 40px auto;
+        }
+
+        .final-slide-button {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .final-slide-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px -5px rgba(234, 88, 12, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .final-slide h3 { font-size: 36px; }
+            .final-slide p { font-size: 18px; }
+            .final-slide-box h4 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="slides-container" id="slidesContainer">
+
+        <!-- ==================== SLIDE 1: HERO ==================== -->
+        <section class="slide hero-slide">
+            <div class="slide-number">1 / 25</div>
+            <div class="brand" style="position: absolute; top: 40px; left: 40px;">Prepe</div>
+            <h1 class="hero-title">Female Reproductive System 🌸</h1>
+            <p class="hero-subtitle">Anatomy, Physiology & DMLT Clinical Guide</p>
+            <div class="hero-grid">
+                <div class="hero-tile">
+                    <h3>Anatomy (संरचना)</h3>
+                    <p>Ovaries, Uterus, Fallopian Tubes, Vagina और External Genitalia का विस्तृत अध्ययन और उनके कार्य।</p>
+                </div>
+                <div class="hero-tile">
+                    <h3>Endocrinology (हार्मोन)</h3>
+                    <p>HPO Axis: Hypothalamus, Pituitary और Ovarian hormones (Estrogen & Progesterone) का पूरा नियंत्रण चक्र।</p>
+                </div>
+                <div class="hero-tile">
+                    <h3>Clinical (पैथोलॉजी)</h3>
+                    <p>DMLT Focus: Pap Smear, Menstrual Disorders, PCOS, Fibroids और Pregnancy Test (hCG) की महत्वपूर्ण जानकारी।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 2: INTRODUCTION & OVERVIEW ==================== -->
+        <section class="slide">
+            <div class="slide-number">2 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Introduction & Overview 📖</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Definition & Purpose</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>🔬 परिभाषा:</strong> Female Reproductive System उन अंगों का समूह है जो reproduction (प्रजनन), pregnancy (गर्भावस्था) और female sex hormones के निर्माण के लिए ज़िम्मेदार है।
+                    </p>
+                    <h3>Classification of Organs</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🌸</span>Primary Sex Organs (प्राथमिक अंग)</div>
+                            <ul class="point-list">
+                                <li><strong>Ovaries (अंडाशय):</strong> यह एक जोड़ी (pair) में होते हैं।</li>
+                                <li><strong>मुख्य कार्य 1:</strong> Gametes (Ovum/Egg) का उत्पादन (Oogenesis)।</li>
+                                <li><strong>मुख्य कार्य 2:</strong> Sex Hormones (Estrogen & Progesterone) का स्राव।</li>
+                            </ul>
+                            <p class="point-example">नोट: चूँकि यह हार्मोन बनाते हैं, इसलिए यह Endocrine system का भी हिस्सा हैं।</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔗</span>Accessory Sex Organs (सहायक अंग)</div>
+                            <ul class="point-list">
+                                <li><strong>Duct System:</strong> Fallopian Tubes (Oviducts), Uterus (गर्भाशय), Vagina (योनि)।</li>
+                                <li><strong>External Genitalia:</strong> Vulva (Labia, Clitoris, etc.)।</li>
+                                <li><strong>Accessory Glands:</strong> Bartholin's glands, Mammary glands (Breasts)।</li>
+                                <li><strong>कार्य:</strong> Ovum का परिवहन, fertilization के लिए स्थान देना, और भ्रूण (fetus) का विकास करना।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Core Functions 🎯</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Function</th>
+                                    <th>Organ Responsible</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Oogenesis</strong></td>
+                                    <td>Ovary</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fertilization</strong></td>
+                                    <td>Fallopian Tube (Ampulla)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gestation (Pregnancy)</strong></td>
+                                    <td>Uterus</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Copulation/Birth Canal</strong></td>
+                                    <td>Vagina</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Male vs Female (Overview) 🆚</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Production:</strong> Male में sperm production continuous होता है, Female में ovum production cyclic (28 days) होता है।</li>
+                            <li><strong>Storage:</strong> Female जन्म के समय ही सभी eggs (primordial follicles) के साथ पैदा होती है।</li>
+                        </ul>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">28 Days</span>
+                        <span class="stat-label">Average Reproductive Cycle</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">📖 Overview</div>
+                <div class="footer-tag">🌸 Primary vs Accessory</div>
+                <div class="footer-tag">📝 Foundation Topic</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 3: EMBRYOLOGY & DEVELOPMENT ==================== -->
+        <section class="slide">
+            <div class="slide-number">3 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Embryology & Development 👶</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Development of Female Genitalia</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧬</span>Genetic Basis (आनुवंशिक आधार)</div>
+                            <ul class="point-list">
+                                <li>Female का chromosomal pattern <strong>46, XX</strong> होता है।</li>
+                                <li>Y chromosome और SRY gene की अनुपस्थिति के कारण female reproductive system विकसित होता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔶</span>Gonad Formation (Ovary Development)</div>
+                            <ul class="point-list">
+                                <li><strong>Genital Ridge:</strong> 5वें हफ्ते में undifferentiated gonads बनते हैं।</li>
+                                <li>SRY gene ना होने के कारण, cortex विकसित होकर <strong>Ovary</strong> बनाता है। (Male में medulla Testis बनाता है)।</li>
+                                <li>Primordial germ cells yolk sac से migrate होकर ovary में आते हैं।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🛤️</span>Müllerian Ducts (Paramesonephric Ducts)</div>
+                            <ul class="point-list">
+                                <li>यह Female internal organs का <strong>precursor (आधार)</strong> है।</li>
+                                <li><strong>क्या बनता है?</strong> Fallopian tubes, Uterus, Cervix, और Vagina का ऊपरी 1/3 हिस्सा।</li>
+                                <li>Male में (Wolffian duct) विकसित होता है और Müllerian duct नष्ट हो जाता है।</li>
+                            </ul>
+                            <p class="point-example">💡 PYQ Concept: AMH (Anti-Müllerian Hormone) female में अनुपस्थित होता है, इसीलिए Müllerian duct विकसित हो पाता है!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Development Timeline ⏱️</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-title">Week 5-6</div>
+                                <div class="timeline-desc">Indifferent gonads (लिंग का पता नहीं)।</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">Week 7-8</div>
+                                <div class="timeline-desc">Ovaries का differentiation शुरू।</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">Week 10-12</div>
+                                <div class="timeline-desc">Müllerian ducts का fusion (Uterus बनना)।</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">Week 20</div>
+                                <div class="timeline-desc">Fetal ovary में 7 million eggs (Max Oocytes)!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Congenital Anomalies ⚠️</h4>
+                        <p style="margin-bottom: 12px;">अगर Müllerian duct ठीक से fuse नहीं होता:</p>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Uterus Didelphys:</strong> Double uterus & double vagina.</li>
+                            <li><strong>Bicornuate Uterus:</strong> Heart-shaped uterus (दो सींग वाला)।</li>
+                            <li><strong>Septate Uterus:</strong> Uterus के बीच में दीवार (septum)।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">👶 Embryology</div>
+                <div class="footer-tag">🛤️ Müllerian Duct</div>
+                <div class="footer-tag">📝 PYQ: AMH Concept</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 4: OVARIES (ANATOMY) ==================== -->
+        <section class="slide">
+            <div class="slide-number">4 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Ovaries: Anatomy 🥚</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Structure & Location</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>📍 स्थान:</strong> Pelvic cavity में, uterus के दोनों तरफ (Ovarian fossa में)।<br>
+                        <strong>📏 आकार:</strong> Almond (बादाम) जैसी, 3x2x1 cm (Length x Width x Thickness)।<br>
+                        <strong>⚖️ वजन:</strong> लगभग 5-8 ग्राम (प्रत्येक)।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧅</span>Internal Structure (Cross Section)</div>
+                            <ul class="point-list">
+                                <li><strong>Germinal Epithelium:</strong> सबसे बाहरी परत (Simple cuboidal cells)।</li>
+                                <li><strong>Tunica Albuginea:</strong> Epithelium के नीचे dense connective tissue की सफेद परत।</li>
+                                <li><strong>Cortex (बाहरी भाग):</strong> इसमें विभिन्न विकास चरणों (development stages) वाले <strong>Ovarian Follicles</strong> होते हैं।</li>
+                                <li><strong>Medulla (भीतरी भाग):</strong> Loose connective tissue, blood vessels (रक्त वाहिकाएं), lymphatics और nerves से भरा होता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔗</span>Ligaments of Ovary (सहारे)</div>
+                            <ul class="point-list">
+                                <li><strong>Ovarian Ligament:</strong> Ovary को Uterus से जोड़ता है।</li>
+                                <li><strong>Suspensory Ligament (Infundibulopelvic):</strong> Ovary को pelvic wall से जोड़ता है। (इसी में ovarian artery & vein होती है)।</li>
+                                <li><strong>Mesovarium:</strong> Broad ligament का वह हिस्सा जो ovary को कवर करता है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Blood & Nerve Supply 🩸</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Structure</th>
+                                    <th>Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Artery</strong></td>
+                                    <td>Ovarian Artery (Abdominal Aorta से सीधा)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vein (Right)</strong></td>
+                                    <td>Inferior Vena Cava (IVC)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vein (Left)</strong></td>
+                                    <td>Left Renal Vein</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nerve</strong></td>
+                                    <td>Ovarian Plexus (T10-T11)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Clinical Relevance 🏥</h4>
+                        <div class="quick-fact" style="margin-top: 5px;">
+                            <strong>Referred Pain:</strong> Ovarian pain अक्सर नाभि (umbilicus) के आसपास महसूस होता है क्योंकि nerve supply T10 segment से है!
+                        </div>
+                        <ul style="list-style-type: '▸'; padding-left: 20px; margin-top: 15px;">
+                            <li><strong>Ovarian Cyst:</strong> Fluid-filled sac in ovary.</li>
+                            <li><strong>Oophorectomy:</strong> Ovary को surgical तरीके से निकालना।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🥚 Primary Organ</div>
+                <div class="footer-tag">🧅 Cortex vs Medulla</div>
+                <div class="footer-tag">🩸 Blood Supply is V.IMP</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 5: FOLLICULAR DEVELOPMENT ==================== -->
+        <section class="slide">
+            <div class="slide-number">5 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Follicular Development 🌸</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Stages of Oogenesis</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>💡 Concept:</strong> Ovary के cortex में eggs (oocytes) follicles के अंदर विकसित होते हैं। हर महीने FSH हार्मोन के प्रभाव में यह प्रक्रिया होती है।
+                    </p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-title">1. Primordial Follicle</div>
+                            <div class="timeline-desc">Primary oocyte घिरी होती है flat squamous cells की एक परत से। (जन्म के समय मौजूद)।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">2. Primary Follicle</div>
+                            <div class="timeline-desc">Squamous cells cuboidal (Granulosa cells) में बदल जाती हैं। <strong>Zona pellucida</strong> (glycoprotein layer) बनना शुरू होती है।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">3. Secondary Follicle</div>
+                            <div class="timeline-desc">Granulosa cells की कई परतें बन जाती हैं। बाहर Theca cells (Theca interna & externa) विकसित होती हैं। Theca cells Androgen बनाती हैं जिसे Granulosa cells Estrogen में बदल देती हैं!</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">4. Graafian (Mature) Follicle</div>
+                            <div class="timeline-desc">एक बड़ी fluid-filled cavity <strong>(Antrum)</strong> बन जाती है। Oocyte एक तरफ खिसक जाता है (Cumulus oophorus)। यही follicle ovulate होता है।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">5. Corpus Luteum (Yellow Body)</div>
+                            <div class="timeline-desc">Ovulation के बाद बचा हुआ follicle। यह <strong>Progesterone</strong> secrete करता है जो pregnancy maintain करता है।</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Follicle Numbers Math 🧮</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Life Stage</th>
+                                    <th>Number of Eggs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Fetal Life (20 weeks)</strong></td>
+                                    <td>6-7 Million (Max)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>At Birth</strong></td>
+                                    <td>1-2 Million</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>At Puberty</strong></td>
+                                    <td>~ 400,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ovulated in Lifetime</strong></td>
+                                    <td>Only ~ 400 eggs!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 14px; margin-top: 10px; color: var(--text-light);">बाकी सभी eggs Atresia (natural death) का शिकार हो जाते हैं।</p>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Corpus Albicans ⚪</h4>
+                        <p style="margin-bottom: 12px;">अगर Fertilization नहीं होता है, तो Corpus Luteum 14 दिन बाद नष्ट (degenerate) हो जाता है और एक सफेद scar tissue बनाता है जिसे <strong>Corpus Albicans (White Body)</strong> कहते हैं।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🌸 Oogenesis Steps</div>
+                <div class="footer-tag">🟡 Corpus Luteum</div>
+                <div class="footer-tag">📝 High-Yield Stages</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 6: FALLOPIAN TUBES ==================== -->
+        <section class="slide">
+            <div class="slide-number">6 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Fallopian Tubes (Oviducts) 🛤️</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Anatomy & Parts</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>📏 लम्बाई:</strong> 10-12 cm लम्बी muscular tubes।<br>
+                        <strong>🎯 मुख्य कार्य:</strong> Ovum (egg) को ovary से uterus तक ले जाना और fertilization के लिए स्थान (site) प्रदान करना।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🖐️</span>1. Infundibulum</div>
+                            <ul class="point-list">
+                                <li>Ovary के सबसे करीब, funnel-shaped (कीप के आकार) का हिस्सा।</li>
+                                <li>इसके किनारों पर उंगलियों जैसे projections होते हैं जिन्हें <strong>Fimbriae</strong> कहते हैं।</li>
+                                <li><strong>कार्य:</strong> Ovulation के समय egg को catch (पकड़ना) करना।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📍</span>2. Ampulla</div>
+                            <ul class="point-list">
+                                <li>Tube का सबसे चौड़ा और लंबा हिस्सा।</li>
+                                <li><strong>⭐ सबसे महत्वपूर्ण:</strong> यही वह स्थान है जहाँ <strong>Fertilization (निषेचन)</strong> होता है! (Sperm और egg मिलते हैं)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🌉</span>3. Isthmus</div>
+                            <ul class="point-list">
+                                <li>संकीर्ण (narrow) और thick-walled हिस्सा जो uterus की तरफ जाता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧱</span>4. Intramural (Interstitial) Part</div>
+                            <ul class="point-list">
+                                <li>सबसे छोटा हिस्सा (1 cm) जो गर्भाशय (uterus) की दीवार के अंदर स्थित होता है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Histology (कोशिका संरचना) 🔬</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Ciliated Columnar Epithelium:</strong> सीलिया (cilia) egg को uterus की तरफ धकेलते हैं।</li>
+                            <li><strong>Peg Cells (Secretory cells):</strong> यह तरल (fluid) स्रावित करती हैं जो sperm और egg को पोषण (nutrition) देता है।</li>
+                        </ul>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Clinical Conditions 🏥</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Condition</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ectopic Pregnancy</strong></td>
+                                    <td>भ्रूण tube में ही implant हो जाता है (Medical emergency)।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Salpingitis</strong></td>
+                                    <td>Fallopian tube का infection/inflammation (PID का हिस्सा)।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tubal Ligation</strong></td>
+                                    <td>Female sterilization (नसबंदी) - Tube को काटना/बांधना।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🛤️ Pathway to Uterus</div>
+                <div class="footer-tag">📍 Ampulla = Fertilization</div>
+                <div class="footer-tag">🏥 Ectopic Risk</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 7: UTERUS (ANATOMY) ==================== -->
+        <section class="slide">
+            <div class="slide-number">7 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Uterus: Anatomy & Parts 🤰</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Structure & Position</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>📍 आकार:</strong> उल्टे नाशपाती (Inverted Pear) जैसा, खोखला muscular अंग।<br>
+                        <strong>📏 Dimension:</strong> 7.5 cm (लम्बाई) x 5 cm (चौड़ाई) x 2.5 cm (मोटाई)।<br>
+                        <strong>📐 Position:</strong> Anteverted (मूत्राशय के ऊपर आगे की ओर झुका हुआ) और Anteflexed।
+                    </p>
+                    <h3>Parts of Uterus</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">⛰️</span>1. Fundus</div>
+                            <ul class="point-list">
+                                <li>सबसे ऊपरी गुंबद (dome) के आकार का हिस्सा।</li>
+                                <li>Fallopian tubes के जुड़ने के स्थान से ऊपर स्थित होता है।</li>
+                                <li>Pregnancy के दौरान Fundal height नापकर बच्चे के विकास का अनुमान लगाया जाता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📦</span>2. Body (Corpus)</div>
+                            <ul class="point-list">
+                                <li>Uterus का मुख्य और सबसे बड़ा हिस्सा।</li>
+                                <li>यहीं पर भ्रूण (fetus) 9 महीने तक विकसित होता है।</li>
+                                <li>इसकी गुहा (cavity) त्रिकोणीय (triangular) होती है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🌉</span>3. Isthmus</div>
+                            <ul class="point-list">
+                                <li>Body और Cervix के बीच का संकीर्ण (narrow) हिस्सा (लगभग 0.5 cm)।</li>
+                                <li>Pregnancy के दौरान यह खिंचकर "Lower Uterine Segment" बनाता है (जहाँ LSCS / सिजेरियन ऑपरेशन होता है)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🚪</span>4. Cervix (गर्भाशय ग्रीवा)</div>
+                            <ul class="point-list">
+                                <li>सबसे निचला बेलनाकार (cylindrical) हिस्सा जो योनि (Vagina) में खुलता है। (विस्तार अगली slide में)।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Normal Position Angles 📐</h4>
+                        <div class="badge-grid" style="grid-template-columns: 1fr;">
+                            <div class="badge" style="text-align: left; padding: 15px;">
+                                <strong>Anteversion (90°):</strong><br>
+                                Uterus और Vagina के बीच का कोण।
+                            </div>
+                            <div class="badge" style="text-align: left; padding: 15px;">
+                                <strong>Anteflexion (170°):</strong><br>
+                                Uterine body और Cervix के बीच का कोण।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Support Structures (Ligaments) ⛓️</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Broad Ligament:</strong> पेरिटोनियम की तह, पूरे uterus को कवर करती है।</li>
+                            <li><strong>Round Ligament:</strong> Uterus को anteverted position में रखता है।</li>
+                            <li><strong>Mackenrodt's (Transverse Cervical):</strong> सबसे मुख्य support!</li>
+                            <li><strong>Uterosacral Ligament:</strong> Cervix को sacrum से जोड़ता है।</li>
+                        </ul>
+                        <div class="quick-fact" style="margin-top: 10px;">
+                            <strong>Prolapse:</strong> अगर ये ligaments कमज़ोर हो जाएँ, तो Uterus योनि से बाहर आ सकता है (Uterine Prolapse)।
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🤰 Fetal Home</div>
+                <div class="footer-tag">📐 Anteverted Position</div>
+                <div class="footer-tag">⛓️ Ligament Support</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 8: UTERUS (LAYERS) ==================== -->
+        <section class="slide">
+            <div class="slide-number">8 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Uterus: Wall Layers 🧱</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>The 3 Layers of Uterus</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Uterus की दीवार बहुत मोटी होती है ताकि pregnancy के दौरान फैल सके और डिलीवरी के समय मजबूत contraction कर सके। इसमें 3 परतें होती हैं।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🛡️</span>1. Perimetrium (सबसे बाहरी)</div>
+                            <ul class="point-list">
+                                <li>यह Serous layer (पेरिटोनियम) है जो uterus को बाहर से कवर करती है।</li>
+                                <li>यह friction को कम करती है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💪</span>2. Myometrium (मध्य परत)</div>
+                            <ul class="point-list">
+                                <li>सबसे मोटी परत, Smooth muscles (चिकनी मांसपेशियों) से बनी होती है।</li>
+                                <li>इसमें muscle fibers 3 दिशाओं में होते हैं (longitudinal, circular, figure-of-8)।</li>
+                                <li><strong>कार्य:</strong> Menstruation के दौरान cramps (मरोड़) उत्पन्न करना।</li>
+                                <li><strong>मुख्य कार्य:</strong> Childbirth (प्रसव) के दौरान <strong>Oxytocin</strong> हार्मोन के प्रभाव में भयंकर contraction करना ताकि बच्चा बाहर आ सके।</li>
+                                <li>Figure-of-8 muscles bleeding रोकने के लिए "Living Ligatures" का काम करती हैं।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🩸</span>3. Endometrium (सबसे भीतरी)</div>
+                            <ul class="point-list">
+                                <li>Mucous membrane की परत जो Uterine cavity को लाइन करती है।</li>
+                                <li>Highly vascular (बहुत अधिक रक्त वाहिकाएं)।</li>
+                                <li><strong>Stratum Functionalis:</strong> यह ऊपरी परत है जो Menstrual cycle में हर महीने बनती है और periods में टूटकर गिर जाती है।</li>
+                                <li><strong>Stratum Basalis:</strong> निचली स्थायी परत, जो periods के बाद functionalis परत को फिर से बनाती है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Blood Supply Flowchart 🩸</h4>
+                        <div class="flow-chart" style="flex-direction: column; gap: 10px;">
+                            <div class="flow-step">Internal Iliac Artery</div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                            <div class="flow-step">Uterine Artery</div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                            <div class="flow-step">Arcuate Arteries (Myometrium)</div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                            <div class="flow-step">Radial Arteries (Endometrium)</div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                            <div class="flow-step">Spiral & Straight Arteries</div>
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Pathology Corner 🏥</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Fibroids (Leiomyoma):</strong> Myometrium (smooth muscle) का benign (गैर-कैंसर) ट्यूमर।</li>
+                            <li><strong>Endometriosis:</strong> जब Endometrial tissue uterus के बाहर (जैसे ovary में) बढ़ने लगता है। बहुत दर्दनाक होता है।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🧱 3 Layers</div>
+                <div class="footer-tag">💪 Myometrium Power</div>
+                <div class="footer-tag">🩸 Endometrium Shedding</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 9: CERVIX ==================== -->
+        <section class="slide">
+            <div class="slide-number">9 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Cervix (गर्भाशय ग्रीवा) 🚪</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Structure & Openings</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Cervix गर्भाशय का निचला 1/3 हिस्सा है (लगभग 2.5 cm लंबा)। यह Uterus को Vagina से जोड़ता है और एक sphincter (वाल्व) की तरह काम करता है।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">⭕</span>The Two Openings (Os)</div>
+                            <ul class="point-list">
+                                <li><strong>Internal Os:</strong> Cervix का वह मुंह जो गर्भाशय (Uterus) के अंदर खुलता है।</li>
+                                <li><strong>External Os:</strong> Cervix का वह मुंह जो योनि (Vagina) में खुलता है।</li>
+                                <li><strong>Cervical Canal:</strong> इन दोनों os के बीच का रास्ता।</li>
+                            </ul>
+                            <p class="point-example">External Os Nulliparous (जिसने जन्म नहीं दिया) में गोल (Round) और Multiparous (माँ बन चुकी) में Slit-like (क्षैतिज) होता है।</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💧</span>Cervical Mucus (श्लेष्मा)</div>
+                            <ul class="point-list">
+                                <li>Cervix की ग्रंथियां mucus बनाती हैं।</li>
+                                <li><strong>Ovulation के समय:</strong> Estrogen के कारण mucus पतला, साफ और तारदार (Spinnbarkeit effect) हो जाता है ताकि Sperm आसानी से तैर सकें।</li>
+                                <li><strong>अन्य समय:</strong> Progesterone के कारण mucus गाढ़ा हो जाता है (Sperm entry रोकता है)।</li>
+                                <li><strong>Pregnancy में:</strong> यह गाढ़ा होकर "Mucus Plug" बनाता है जो infection को uterus में जाने से रोकता है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Histology Zone 🔬 (V.IMP)</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Endocervix (अंदर):</strong> Simple Columnar Epithelium.</li>
+                            <li><strong>Ectocervix (बाहर):</strong> Stratified Squamous Non-keratinized Epithelium.</li>
+                        </ul>
+                        <div class="quick-fact" style="margin-top: 15px;">
+                            <strong>Transformation Zone:</strong> जहाँ ये दोनों epithelium मिलते हैं (Squamocolumnar Junction)। 90% Cervical Cancers यहीं से शुरू होते हैं!
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>DMLT Focus: Pap Smear 🧫</h4>
+                        <p style="margin-bottom: 12px;"><strong>Papanicolaou Test:</strong></p>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li>Cervix के Transformation zone से cells खुरच कर slide पर लिए जाते हैं।</li>
+                            <li><strong>उद्देश्य:</strong> Cervical cancer (Human Papillomavirus - HPV द्वारा) की शुरुआती पहचान करना (Pre-cancerous screening)।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🚪 The Gateway</div>
+                <div class="footer-tag">🔬 Transformation Zone</div>
+                <div class="footer-tag">🧫 Pap Smear (DMLT)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 10: VAGINA ==================== -->
+        <section class="slide">
+            <div class="slide-number">10 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Vagina (योनि) 🎀</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Anatomy & Structure</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">📏</span>Dimensions & Location</div>
+                            <ul class="point-list">
+                                <li>8-10 cm लंबी Fibromuscular tube।</li>
+                                <li>Cervix से शुरू होकर Vulva (बाहर) तक जाती है।</li>
+                                <li>मूत्राशय (Bladder) के पीछे और मलाशय (Rectum) के आगे स्थित है।</li>
+                                <li><strong>Fornices:</strong> Cervix के चारो ओर vagina के गहरे recesses (pockets) होते हैं - Anterior, Posterior (सबसे गहरा), और 2 Lateral fornices।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧱</span>Histology (संरचना)</div>
+                            <ul class="point-list">
+                                <li><strong>Epithelium:</strong> Stratified Squamous Non-keratinized। (घर्षण / friction सहने के लिए)।</li>
+                                <li><strong>Rugae:</strong> Vagina की दीवारों पर transverse folds (सिकुड़न) होते हैं जो इसे फैलने (distend) में मदद करते हैं (childbirth के समय)।</li>
+                                <li><strong>❌ No Glands:</strong> Vagina में अपनी कोई ग्रंथियां नहीं होती! lubrication cervix और Bartholin glands से आता है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Main Functions</h3>
+                    <div class="badge-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+                        <div class="badge">Copulatory Organ<br>(sperm receive करना)</div>
+                        <div class="badge">Birth Canal<br>(शिशु का बाहर आना)</div>
+                        <div class="badge">Menstrual Flow<br>(रक्त बाहर निकालना)</div>
+                    </div>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Vaginal Flora & pH 🧪</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Normal pH</strong></td>
+                                    <td>Acidic (3.8 - 4.5)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Good Bacteria</strong></td>
+                                    <td>Lactobacillus (Döderlein's bacilli)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mechanism</strong></td>
+                                    <td>Glycogen → Lactic Acid</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="quick-fact" style="margin-top: 10px;">
+                            <strong>Protection:</strong> यह Acidic pH योनि को फंगल और बैक्टीरियल infections से बचाता है!
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Clinical Pathology 🏥</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Vaginitis:</strong> योनि में सूजन/संक्रमण।</li>
+                            <li><strong>Candida (Yeast):</strong> सफेद, दही जैसा discharge (Fungal)।</li>
+                            <li><strong>Trichomonas:</strong> हरा/पीला, झागदार discharge (Parasite)।</li>
+                            <li><strong>Bacterial Vaginosis:</strong> मछली जैसी गंध (Fishy odor), pH > 4.5 हो जाता है।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🎀 Birth Canal</div>
+                <div class="footer-tag">🧪 Acidic pH</div>
+                <div class="footer-tag">🏥 DMLT: Vaginal Swab</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 11: EXTERNAL GENITALIA ==================== -->
+        <section class="slide">
+            <div class="slide-number">11 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">External Genitalia (Vulva) 🌺</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Components of Vulva</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Female के सभी बाहरी जननांगों को सामूहिक रूप से <strong>Vulva (Pudendum)</strong> कहा जाता है।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">⛰️</span>Mons Pubis</div>
+                            <ul class="point-list">
+                                <li>Pubic bone के ऊपर fat (adipose tissue) का एक गद्देदार हिस्सा।</li>
+                                <li>Puberty के बाद pubic hair से ढक जाता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🛡️</span>Labia Majora (Outer Lips)</div>
+                            <ul class="point-list">
+                                <li>त्वचा के दो बड़े, मोटे folds (homologous to male Scrotum)।</li>
+                                <li>इनमें पसीने और तेल की ग्रंथियां (Sebaceous glands) होती हैं।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🌺</span>Labia Minora (Inner Lips)</div>
+                            <ul class="point-list">
+                                <li>Labia majora के अंदर दो छोटे, पतले, hair-less folds।</li>
+                                <li>इनके बीच के स्थान को <strong>Vestibule</strong> कहते हैं।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⚡</span>Clitoris</div>
+                            <ul class="point-list">
+                                <li>Labia minora के ऊपरी जोड़ पर स्थित छोटा erectile organ।</li>
+                                <li>Highly sensitive (Male Penis/Glans के homologous)।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>The Vestibule 🕳️</h4>
+                        <p style="margin-bottom: 12px;">Labia minora के बीच के स्थान में 2 मुख्य openings होती हैं:</p>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Urethral Opening:</strong> ऊपर (पेशाब के लिए)।</li>
+                            <li><strong>Vaginal Opening:</strong> नीचे (Hymen नामक झिल्ली से आंशिक रूप से ढका हो सकता है)।</li>
+                        </ul>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Accessory Glands 💧</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Gland</th>
+                                    <th>Homolog (Male)</th>
+                                    <th>Function</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Bartholin's Glands</strong> (Greater vestibular)</td>
+                                    <td>Bulbourethral (Cowper's) Glands</td>
+                                    <td>Mucus secrete कर Vagina को lubricate करना।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Skene's Glands</strong> (Paraurethral)</td>
+                                    <td>Prostate Gland</td>
+                                    <td>Urethra को lubricate करना।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🌺 Vulva</div>
+                <div class="footer-tag">⚡ Clitoris</div>
+                <div class="footer-tag">💧 Bartholin Glands</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 12: MAMMARY GLANDS ==================== -->
+        <section class="slide">
+            <div class="slide-number">12 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Mammary Glands (Breasts) 🍼</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Anatomy of Breast</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>🔬 प्रकार:</strong> Modified Sweat Glands (Apocrine glands)।<br>
+                        <strong>📍 स्थान:</strong> Pectoralis major muscle के ऊपर (2nd to 6th rib तक)।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🍇</span>Internal Structure (Duct System)</div>
+                            <ul class="point-list">
+                                <li><strong>Lobes:</strong> प्रत्येक स्तन में 15-20 lobes होते हैं (Glandular tissue)।</li>
+                                <li><strong>Alveoli (Acini):</strong> Lobes के अंदर अंगूर के गुच्छे जैसी संरचनाएं जो <strong>Milk (दूध)</strong> बनाती हैं।</li>
+                                <li><strong>Path:</strong> Alveoli → Mammary Tubules → Mammary Ducts → Lactiferous Sinus (दूध जमा होता है) → Lactiferous Duct → Nipple।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧽</span>Supportive Tissue</div>
+                            <ul class="point-list">
+                                <li><strong>Adipose Tissue (Fat):</strong> Breast का आकार मुख्य रूप से fat की मात्रा पर निर्भर करता है (दूध बनाने की क्षमता पर नहीं)।</li>
+                                <li><strong>Suspensory Ligaments of Cooper:</strong> Connective tissue जो breast को shape और support देते हैं। (इनके ढीले होने से breast sag करते हैं)।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Hormonal Control 🧠</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Hormone</th>
+                                    <th>Role in Breast</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Estrogen</strong></td>
+                                    <td>Ducts का विकास (Puberty)।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Progesterone</strong></td>
+                                    <td>Alveoli (glands) का विकास।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prolactin</strong></td>
+                                    <td><strong>Milk Production</strong> (Synthesis)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Oxytocin</strong></td>
+                                    <td><strong>Milk Ejection</strong> (Let-down reflex)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Clinical Importance 🎀</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Colostrum:</strong> जन्म के बाद पहले 2-3 दिन निकलने वाला पीला दूध (Antibodies IgA से भरपूर)।</li>
+                            <li><strong>Mastitis:</strong> Breast infection (अक्सर स्तनपान के दौरान)।</li>
+                            <li><strong>Breast Cancer:</strong> महिलाओं में सबसे आम कैंसर। (Screening: Mammography)।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🍼 Lactation</div>
+                <div class="footer-tag">🧠 Prolactin vs Oxytocin</div>
+                <div class="footer-tag">🎀 Mammography</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 13: HORMONAL AXIS ==================== -->
+        <section class="slide">
+            <div class="slide-number">13 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Hormonal Control (HPO Axis) 🧠⚡</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Hypothalamic-Pituitary-Ovarian Axis</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Female cycle का पूरा नियंत्रण मस्तिष्क (Brain) से होता है। इसे HPO Axis कहते हैं।
+                    </p>
+                    <div class="flow-chart" style="flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                        <div class="flow-step" style="background: #e0e7ff; border-color: #6366f1;">1. Hypothalamus (Brain) → Secretes GnRH</div>
+                        <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                        <div class="flow-step" style="background: #dbeafe; border-color: #3b82f6;">2. Anterior Pituitary Gland → Secretes FSH & LH</div>
+                        <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                        <div class="flow-step" style="background: #ffedd5; border-color: #f97316;">3. Ovaries → Secrete Estrogen & Progesterone</div>
+                        <div class="flow-arrow" style="transform: rotate(90deg); margin: -5px 0;">↓</div>
+                        <div class="flow-step" style="background: #fce7f3; border-color: #ec4899;">4. Target Organs (Uterus/Breast) → Changes happen</div>
+                    </div>
+                    <h3>Key Hormones & Roles</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">📈</span>FSH (Follicle Stimulating Hormone)</div>
+                            <ul class="point-list">
+                                <li>Ovary में follicles की वृद्धि (growth) करवाता है।</li>
+                                <li>Follicles को Estrogen बनाने के लिए प्रेरित करता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💥</span>LH (Luteinizing Hormone)</div>
+                            <ul class="point-list">
+                                <li><strong>LH Surge:</strong> इसकी अचानक वृद्धि से <strong>Ovulation</strong> (egg का बाहर आना) होता है (14वें दिन)।</li>
+                                <li>खाली follicle को Corpus Luteum में बदलता है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Ovarian Hormones 🌸</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Hormone</th>
+                                    <th>Source</th>
+                                    <th>Main Function</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Estrogen</strong></td>
+                                    <td>Growing Follicles</td>
+                                    <td>Uterus की परत (Endometrium) का निर्माण/Proliferation.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Progesterone</strong></td>
+                                    <td>Corpus Luteum</td>
+                                    <td>Uterus को Pregnancy के लिए तैयार करना (Secretory).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Feedback Mechanism 🔄</h4>
+                        <div class="quick-fact" style="margin-top: 5px;">
+                            <strong>Negative Feedback:</strong> जब Estrogen/Progesterone हाई होते हैं, तो वे वापस जाकर GnRH, FSH, LH को कम कर देते हैं ताकि cycle control में रहे। (Birth control pills इसी सिद्धांत पर काम करती हैं!)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🧠 HPO Axis</div>
+                <div class="footer-tag">📈 FSH & LH</div>
+                <div class="footer-tag">🌸 Estrogen & Progesterone</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 14: OVARIAN CYCLE ==================== -->
+        <section class="slide">
+            <div class="slide-number">14 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">The Ovarian Cycle 🥚⏳</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Phases of Ovarian Cycle (28 Days)</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Ovary के अंदर 28 दिन में जो बदलाव होते हैं (Egg का बनना और बाहर आना) उसे Ovarian cycle कहते हैं।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🌱</span>1. Follicular Phase (Days 1-13)</div>
+                            <ul class="point-list">
+                                <li><strong>Hormone in charge:</strong> FSH (Follicle Stimulating Hormone)।</li>
+                                <li>कई primordial follicles बढ़ना शुरू करते हैं, लेकिन केवल 1 "Dominant Follicle" (Graafian follicle) पूरी तरह mature होता है।</li>
+                                <li>बढ़ते हुए follicles बड़ी मात्रा में <strong>Estrogen</strong> बनाते हैं।</li>
+                                <li>यह चरण variable होता है (इसी के कारण period cycle की लम्बाई अलग-अलग होती है)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💥</span>2. Ovulation (Day 14)</div>
+                            <ul class="point-list">
+                                <li><strong>Hormone in charge:</strong> LH Surge (LH का अचानक बढ़ना)।</li>
+                                <li>Graafian follicle फट जाता है और Secondary Oocyte (Egg) fallopian tube में आ जाता है।</li>
+                                <li>Body temperature 0.5°C बढ़ जाता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🟡</span>3. Luteal Phase (Days 15-28)</div>
+                            <ul class="point-list">
+                                <li><strong>Hormone in charge:</strong> LH (maintain करता है) & Progesterone (स्रावित होता है)।</li>
+                                <li>फटा हुआ follicle <strong>Corpus Luteum</strong> बन जाता है।</li>
+                                <li>यह भारी मात्रा में Progesterone बनाता है।</li>
+                                <li><strong>Fixed Phase:</strong> यह चरण हमेशा ठीक 14 दिन का होता है!</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Hormone Dominance 📊</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Phase</th>
+                                    <th>Dominant Hormone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Follicular (1-13)</td>
+                                    <td><strong>Estrogen</strong> (High)</td>
+                                </tr>
+                                <tr>
+                                    <td>Ovulation (14)</td>
+                                    <td><strong>LH</strong> (Surge/Peak)</td>
+                                </tr>
+                                <tr>
+                                    <td>Luteal (15-28)</td>
+                                    <td><strong>Progesterone</strong> (High)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>If NO Pregnancy Occurs ❌</h4>
+                        <p style="margin-bottom: 12px; line-height: 1.8;">
+                            अगर sperm नहीं आता: <br>
+                            1. Corpus luteum 14 दिन बाद मर कर Corpus Albicans बन जाता है।<br>
+                            2. Progesterone & Estrogen level अचानक गिर जाते हैं (Drop)।<br>
+                            3. इस sudden drop के कारण periods (Menstruation) शुरू हो जाते हैं!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">⏳ 28 Day Cycle</div>
+                <div class="footer-tag">💥 LH Surge = Ovulation</div>
+                <div class="footer-tag">🟡 Corpus Luteum</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 15: MENSTRUAL CYCLE ==================== -->
+        <section class="slide">
+            <div class="slide-number">15 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">The Menstrual Cycle (Uterine) 🩸</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Phases of Endometrial Changes</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Ovary के hormones (Estrogen/Progesterone) के प्रभाव में गर्भाशय (Uterus) की परत (Endometrium) में जो बदलाव होते हैं, उसे Menstrual Cycle कहते हैं।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🩸</span>1. Menstrual Phase (Days 1-5)</div>
+                            <ul class="point-list">
+                                <li><strong>कारण:</strong> Progesterone और Estrogen का अचानक कम होना।</li>
+                                <li>Endometrium की Stratum Functionalis परत टूटकर योनि (vagina) से रक्त (blood) के रूप में बाहर आ जाती है।</li>
+                                <li>इसे Periods, Menses या Bleeding phase कहते हैं (Blood loss: ~30-50 ml)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧱</span>2. Proliferative Phase (Days 6-14)</div>
+                            <ul class="point-list">
+                                <li><strong>Hormone in charge:</strong> Estrogen (Ovary के follicle से आता है)।</li>
+                                <li>Ovarian cycle के Follicular phase के साथ-साथ चलती है।</li>
+                                <li>टूटी हुई Endometrium की परत फिर से बनना (proliferate) और मोटी होना शुरू होती है।</li>
+                                <li>Blood vessels और glands विकसित होती हैं।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🍯</span>3. Secretory Phase (Days 15-28)</div>
+                            <ul class="point-list">
+                                <li><strong>Hormone in charge:</strong> Progesterone (Corpus luteum से आता है)।</li>
+                                <li>Ovarian cycle के Luteal phase के साथ चलती है।</li>
+                                <li>Endometrium अपनी अधिकतम मोटाई (5-6 mm) पर पहुंच जाती है।</li>
+                                <li>Glands पोषक तत्व (glycogen) स्रावित करती हैं ताकि संभावित भ्रूण (embryo) को पोषण मिल सके। (Preparing for pregnancy!)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Integration (Cycle Mapping) 🗺️</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Days</th>
+                                    <th>Ovarian Cycle</th>
+                                    <th>Uterine Cycle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 - 5</td>
+                                    <td>Follicular (Early)</td>
+                                    <td><strong>Menstrual</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>6 - 13</td>
+                                    <td>Follicular (Late)</td>
+                                    <td><strong>Proliferative</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td><strong>Ovulation</strong></td>
+                                    <td>(Transition)</td>
+                                </tr>
+                                <tr>
+                                    <td>15 - 28</td>
+                                    <td><strong>Luteal</strong></td>
+                                    <td><strong>Secretory</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Key Medical Terms 🏥</h4>
+                        <div class="badge-grid" style="grid-template-columns: 1fr;">
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>Menarche:</strong> जीवन का पहला period (Puberty).</div>
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>Menopause:</strong> Periods का हमेशा के लिए रुक जाना (45-50 yrs).</div>
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>Dysmenorrhea:</strong> बहुत दर्दनाक periods.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🩸 Menses</div>
+                <div class="footer-tag">🧱 Proliferative</div>
+                <div class="footer-tag">🍯 Secretory</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 16: FERTILIZATION ==================== -->
+        <section class="slide">
+            <div class="slide-number">16 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Fertilization (निषेचन) 🧬</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>The Process of Fertilization</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        <strong>📍 स्थान:</strong> Fallopian tube का Ampulla भाग。<br>
+                        <strong>⏱️ समय:</strong> Ovulation के 12-24 घंटे के अंदर (क्योंकि egg का जीवनकाल 24 घंटे और sperm का 48-72 घंटे होता है)।
+                    </p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-title">1. Capacitation (तैयारी)</div>
+                            <div class="timeline-desc">Female tract में Sperm की झिल्ली से cholesterol हट जाता है, जिससे वह egg को छेदने (penetrate) के लिए तैयार होता है (Hyperactive motility)।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">2. Corona Radiata Penetration</div>
+                            <div class="timeline-desc">Sperm अपने सिर (acrosome) से Hyaluronidase enzyme निकालता है जो egg के बाहर की कोशिकाओं (corona radiata) को गला देता है।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">3. Acrosomal Reaction</div>
+                            <div class="timeline-desc">Sperm <strong>Zona Pellucida</strong> (egg की बाहरी झिल्ली) से जुड़ता है और Acrosin enzyme निकालकर उसमें छेद करता है।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">4. Cortical Reaction (Block to Polyspermy)</div>
+                            <div class="timeline-desc">जैसे ही पहला sperm अंदर जाता है, egg अपनी झिल्ली कठोर (hard) कर लेता है ताकि कोई दूसरा sperm अंदर ना जा सके! (Preventing abnormal DNA)।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">5. Zygote Formation</div>
+                            <div class="timeline-desc">Sperm (23 chromosomes) + Egg (23 chromosomes) = <strong>Zygote (46 chromosomes)</strong>। जीवन शुरू!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Survival Window ⏳</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Gamete</th>
+                                    <th>Lifespan in Female Tract</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ovum (Egg)</strong></td>
+                                    <td>12 - 24 Hours</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sperm</strong></td>
+                                    <td>48 - 72 Hours (2-3 Days)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="quick-fact" style="margin-top: 15px;">
+                            <strong>Fertile Window:</strong> Ovulation से 2 दिन पहले और 1 दिन बाद तक pregnancy के chance सबसे ज्यादा होते हैं।
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Twins (जुड़वाँ) 👶👶</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Identical (Monozygotic):</strong> 1 Egg + 1 Sperm. बाद में Zygote दो में टूट जाता है। (Same DNA/Gender)।</li>
+                            <li><strong>Fraternal (Dizygotic):</strong> 2 अलग-अलग Eggs + 2 अलग-अलग Sperms। (Different DNA)।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">📍 Ampulla</div>
+                <div class="footer-tag">🧬 Zygote Formation</div>
+                <div class="footer-tag">🛡️ Block to Polyspermy</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 17: IMPLANTATION & PREGNANCY ==================== -->
+        <section class="slide">
+            <div class="slide-number">17 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Implantation & Pregnancy 🤰</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Journey to Uterus</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Zygote बनने के बाद वह गर्भाशय (Uterus) की ओर बढ़ता है और विभाजित (cleavage) होने लगता है।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🦠</span>Development Stages</div>
+                            <ul class="point-list">
+                                <li><strong>Zygote (Day 1):</strong> 1 cell.</li>
+                                <li><strong>Morula (Day 3-4):</strong> 16-32 cells का ठोस शहतूत (mulberry) जैसा गुच्छा।</li>
+                                <li><strong>Blastocyst (Day 5-6):</strong> अंदर एक cavity (खोखलापन) बन जाता है। यही वह stage है जो Uterus में implant होता है!</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📍</span>Implantation (Day 6-7)</div>
+                            <ul class="point-list">
+                                <li>Blastocyst गर्भाशय की दीवार (Endometrium) में चिपक कर धंस जाता है।</li>
+                                <li>Pregnancy के दौरान Endometrium को <strong>Decidua</strong> कहा जाता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🌟</span>Role of hCG Hormone</div>
+                            <ul class="point-list">
+                                <li>Implant होते ही भ्रूण का बाहरी हिस्सा (Trophoblast) <strong>hCG (Human Chorionic Gonadotropin)</strong> हार्मोन निकालता है।</li>
+                                <li>hCG जाकर Corpus Luteum को बचाता है ताकि वह Progesterone बनाता रहे और periods ना आएं।</li>
+                                <li><strong>DMLT Focus:</strong> Urine Pregnancy Kit (UPT) इसी hCG हार्मोन को detect करती है!</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>The Placenta (गर्भनाल) 🔗</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li>माँ और बच्चे के बीच का connection.</li>
+                            <li><strong>कार्य:</strong> Nutrition (पोषण), Oxygen देना, Waste निकालना।</li>
+                            <li><strong>Endocrine Function:</strong> 3 महीने बाद Corpus luteum का काम खत्म हो जाता है और Placenta खुद Progesterone और Estrogen बनाने लगता है!</li>
+                        </ul>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Gestation Period ⏱️</h4>
+                        <div class="stat-box">
+                            <span class="stat-number">280 Days</span>
+                            <span class="stat-label">40 Weeks / 9 Months</span>
+                        </div>
+                        <div class="quick-fact" style="margin-top: 15px;">
+                            <strong>Trimesters:</strong> Pregnancy को 3-3 महीने के 3 trimesters में बांटा गया है।
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🤰 Blastocyst Stage</div>
+                <div class="footer-tag">🌟 hCG Hormone (UPT)</div>
+                <div class="footer-tag">🔗 Placenta Magic</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 18: PARTURITION ==================== -->
+        <section class="slide">
+            <div class="slide-number">18 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Parturition (Labour / Childbirth) 👶</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Hormonal Control of Labour</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        Parturition वह Neuro-endocrine mechanism है जिससे विकसित शिशु गर्भाशय से बाहर आता है।
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🔄</span>The Trigger (Fetal Ejection Reflex)</div>
+                            <ul class="point-list">
+                                <li>जब बच्चा पूरी तरह विकसित हो जाता है, तो Placenta और Fetus हल्के contractions शुरू करते हैं।</li>
+                                <li>इससे माँ की Posterior Pituitary gland से <strong>Oxytocin</strong> रिलीज होता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💪</span>Oxytocin (The Birth Hormone)</div>
+                            <ul class="point-list">
+                                <li>यह Uterus (Myometrium) की मांसपेशियों में ज़बरदस्त contraction (सिकुड़न) पैदा करता है।</li>
+                                <li>Contraction → और ज़्यादा Oxytocin → और तेज़ Contraction (यह Positive Feedback का बेहतरीन उदाहरण है!)।</li>
+                                <li><strong>Relaxin:</strong> Ovary/Placenta से निकलता है, जो pubic symphysis (pelvis) को चौड़ा (relax) करता है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Stages of Labour</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-title">Stage 1: Dilation (सबसे लंबा)</div>
+                            <div class="timeline-desc">Cervix का पूरा खुलना (dilate होना) - लगभग 10 cm तक। Amniotic sac (पानी की थैली) का फटना।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">Stage 2: Expulsion (पुशिंग)</div>
+                            <div class="timeline-desc">Strong contractions के साथ शिशु (baby) का vagina (birth canal) के रास्ते बाहर आना।</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">Stage 3: Placental Stage</div>
+                            <div class="timeline-desc">बच्चे के जन्म के 15-30 मिनट बाद Placenta (Afterbirth) का गर्भाशय से अलग होकर बाहर आना।</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Lactation Summary 🍼</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Hormone Responsible</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Milk Production</strong></td>
+                                    <td>Prolactin (Ant. Pituitary)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Milk Ejection</strong></td>
+                                    <td>Oxytocin (Post. Pituitary)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Lactational Amenorrhea 🤱</h4>
+                        <div class="quick-fact" style="margin-top: 5px;">
+                            <strong>Natural Contraceptive:</strong> जब तक माँ बच्चे को भरपूर स्तनपान (Breastfeeding) कराती है, हाई Prolactin लेवल GnRH को दबा कर रखता है, जिससे Ovulation और Periods (Menstrual cycle) रुके रहते हैं (लगभग 6 महीने तक)!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">👶 Childbirth</div>
+                <div class="footer-tag">💪 Oxytocin = Contraction</div>
+                <div class="footer-tag">🔄 Positive Feedback</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 19: CLINICAL PATHOLOGY ==================== -->
+        <section class="slide">
+            <div class="slide-number">19 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Clinical & Pathology 🏥</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Common Female Disorders</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🩸</span>Menstrual Disorders</div>
+                            <ul class="point-list">
+                                <li><strong>Amenorrhea:</strong> Periods का ना आना (Primary = कभी शुरू नहीं हुए, Secondary = Pregnancy, Stress या PCOS के कारण रुक गए)।</li>
+                                <li><strong>Dysmenorrhea:</strong> Periods के दौरान बहुत तेज़ दर्द (cramps)।</li>
+                                <li><strong>Menorrhagia:</strong> Periods में बहुत अधिक (heavy) bleeding होना (>80 ml)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⚠️</span>PCOS (Polycystic Ovary Syndrome)</div>
+                            <ul class="point-list">
+                                <li><strong>क्या है?</strong> Hormonal imbalance. Androgen (male hormone) बढ़ जाता है।</li>
+                                <li><strong>लक्षण:</strong> Irregular periods, चेहरे पर बाल (Hirsutism), मोटापा, Ovary में बहुत सारे छोटे cysts (follicles जो ovulate नहीं हो पाए)।</li>
+                                <li><strong>Clinical Marker:</strong> LH/FSH ratio बढ़ जाता है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🕸️</span>Endometriosis</div>
+                            <ul class="point-list">
+                                <li>Endometrial tissue गर्भाशय (uterus) के बाहर (जैसे ovary, fallopian tube, intestine) बढ़ने लगता है।</li>
+                                <li>यह tissue भी हर महीने period के समय ब्लीड करता है, जिससे भारी दर्द (pelvic pain) और infertility हो सकती है।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔴</span>Fibroids (Leiomyoma)</div>
+                            <ul class="point-list">
+                                <li>Uterus की myometrium (muscle) में बनने वाले Non-cancerous (benign) tumors. Heavy bleeding और दर्द करते हैं।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>PID (Pelvic Inflammatory Disease) 🦠</h4>
+                        <p style="margin-bottom: 12px;">Female reproductive organs (Uterus, Tubes) का बैक्टीरियल इन्फेक्शन (अक्सर Chlamydia या Gonorrhea STI के कारण)।</p>
+                        <p style="color: #ef4444; font-weight: bold;">खतरा: Fallopian tubes block हो सकती हैं → Infertility या Ectopic Pregnancy!</p>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Cancers in Females 🎗️</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Cancer Type</th>
+                                    <th>Key Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Breast Cancer</strong></td>
+                                    <td>BRCA1/BRCA2 gene mutations, Lump in breast.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cervical Cancer</strong></td>
+                                    <td>HPV Virus infection के कारण (Preventable by vaccine).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Endometrial CA</strong></td>
+                                    <td>Post-menopausal bleeding.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🏥 Pathology Overview</div>
+                <div class="footer-tag">⚠️ PCOS & Endometriosis</div>
+                <div class="footer-tag">🎗️ Cancers</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 20: DMLT DIAGNOSTIC RELEVANCE ==================== -->
+        <section class="slide">
+            <div class="slide-number">20 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Diagnostic & Lab Relevance (DMLT) 🔬</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Crucial Lab Tests in Gynecology</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                        DMLT Students के लिए Female Reproductive System से जुड़े लैब टेस्ट समझना सबसे ज़रूरी है!
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">➕</span>1. Pregnancy Test (UPT / Beta-hCG)</div>
+                            <ul class="point-list">
+                                <li><strong>Target:</strong> Human Chorionic Gonadotropin (hCG) हार्मोन।</li>
+                                <li><strong>Sample:</strong> Urine (सुबह का पहला sample सबसे अच्छा) या Blood Serum.</li>
+                                <li><strong>सिद्धांत:</strong> Antigen-Antibody reaction (Lateral flow chromatography)।</li>
+                                <li><strong>Serum Beta-hCG (Quantitative):</strong> Ectopic pregnancy या Trophoblastic disease (Molar pregnancy) का पता लगाने के लिए।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧫</span>2. Pap Smear (Papanicolaou Stain)</div>
+                            <ul class="point-list">
+                                <li><strong>Sample:</strong> Cervix के squamocolumnar junction से लिया गया scrape (Ayre's spatula से)।</li>
+                                <li><strong>Fixative:</strong> 95% Ethyl Alcohol (Smear बनाते ही तुरंत fix करना ज़रूरी)।</li>
+                                <li><strong>Stains Used:</strong> Hematoxylin (Nuclear), OG-6 (Cytoplasmic keratin), EA-36/50 (Cytoplasmic squamous/columnar cells)।</li>
+                                <li><strong>Diagnosis:</strong> Cervical Dysplasia या Cancer cells।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧪</span>3. Hormonal Assays (ELISA / CLIA)</div>
+                            <ul class="point-list">
+                                <li><strong>FSH & LH:</strong> Menopause, PCOS, Infertility की जांच के लिए (PCOS में LH:FSH ratio > 2:1 हो जाता है)।</li>
+                                <li><strong>Prolactin:</strong> Galactorrhea (दूध निकलना बिना pregnancy) या Amenorrhea में।</li>
+                                <li><strong>AMH (Anti-Mullerian Hormone):</strong> Ovarian Reserve (अंडाशय में कितने eggs बचे हैं) नापने का सबसे अच्छा marker।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Vaginal Wet Mount 🔬</h4>
+                        <p style="margin-bottom: 12px;">Vaginal discharge को Saline में mix करके microscope में देखना:</p>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Clue Cells:</strong> Epithelial cells जिन पर bacteria चिपके हों (Bacterial Vaginosis).</li>
+                            <li><strong>Trichomonas:</strong> Motile, झटके खाने वाले परजीवी (jerky motility)।</li>
+                            <li><strong>Yeast Cells:</strong> Budding yeast या pseudohyphae (Candida).</li>
+                        </ul>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Tumor Markers 🎗️</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Marker</th>
+                                    <th>Cancer Indication</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>CA-125</strong></td>
+                                    <td>Ovarian Cancer</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CA 15-3</strong></td>
+                                    <td>Breast Cancer</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Beta-hCG</strong></td>
+                                    <td>Choriocarcinoma</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🔬 DMLT Core</div>
+                <div class="footer-tag">➕ UPT & Beta-hCG</div>
+                <div class="footer-tag">🧫 Pap Smear Details</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 21: CONTRACEPTION ==================== -->
+        <section class="slide">
+            <div class="slide-number">21 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Contraception (Family Planning) 🛡️</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Methods of Contraception</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🌿</span>Natural Methods</div>
+                            <ul class="point-list">
+                                <li><strong>Rhythm Method (Safe Period):</strong> 10वें से 17वें दिन (Fertile window) के बीच intercourse से बचना।</li>
+                                <li><strong>Coitus Interruptus:</strong> Ejaculation से पहले Penis बाहर निकालना।</li>
+                                <li><strong>Lactational Amenorrhea:</strong> डिलीवरी के 6 महीने तक (breastfeeding के दौरान)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧱</span>Barrier Methods</div>
+                            <ul class="point-list">
+                                <li><strong>Condoms:</strong> Male और Female condoms। (एकमात्र तरीका जो Pregnancy और STIs/HIV दोनों से बचाता है!)</li>
+                                <li><strong>Diaphragm / Cervical Cap:</strong> Cervix को कवर करते हैं (Spermicidal jelly के साथ उपयोग)।</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💊</span>Hormonal Methods (OCPs)</div>
+                            <ul class="point-list">
+                                <li><strong>Combined Pills (Mala-D/Saheli):</strong> Estrogen + Progesterone। यह Ovulation को रोकती हैं (FSH/LH को suppress करके)।</li>
+                                <li><strong>Emergency Pill (i-Pill):</strong> High dose Progesterone, असुरक्षित सेक्स के 72 घंटे के अंदर लेनी होती है।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>IUDs (Intrauterine Devices) 📍</h4>
+                        <p style="margin-bottom: 12px;">Doctor द्वारा Uterus में लगाई जाती हैं:</p>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Copper-T (CuT):</strong> कॉपर आयन Sperm की motility (गति) को मार देते हैं।</li>
+                            <li><strong>Hormonal (Mirena):</strong> Progesterone रिलीज़ करती है, Cervical mucus को गाढ़ा कर देती है।</li>
+                        </ul>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Permanent Methods (Surgical) ✂️</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Tubectomy</strong> (Female)</td>
+                                    <td>Fallopian tubes को काटकर बाँधना। Egg uterus तक नहीं पहुँचता।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vasectomy</strong> (Male)</td>
+                                    <td>Vas Deferens को काटना। Sperm सीमन में नहीं आते।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🛡️ Contraception</div>
+                <div class="footer-tag">💊 Hormonal Control</div>
+                <div class="footer-tag">📍 Copper-T Concept</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 22: MALE VS FEMALE SYSTEM ==================== -->
+        <section class="slide">
+            <div class="slide-number">22 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Comparative Concepts (Male vs Female) 🆚</div>
+            </div>
+            <div class="slide-content" style="display: block;">
+                <table class="mini-table" style="width: 100%; font-size: 17px;">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                            <th style="text-align: center; font-size: 19px;">Feature</th>
+                            <th style="text-align: center; font-size: 19px;">Female Reproductive System 🌸</th>
+                            <th style="text-align: center; font-size: 19px;">Male Reproductive System 🔵</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Primary Sex Organ</strong></td>
+                            <td>Ovary (अंडाशय)</td>
+                            <td>Testis (वृषण)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gamete Produced</strong></td>
+                            <td>Ovum / Egg (1 per month)</td>
+                            <td>Sperm (Millions per day)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Main Sex Hormones</strong></td>
+                            <td>Estrogen & Progesterone</td>
+                            <td>Testosterone (Androgens)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Production Nature</strong></td>
+                            <td>Cyclic (28 दिन का चक्र)</td>
+                            <td>Continuous (निरंतर)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Production Stops</strong></td>
+                            <td>Menopause (45-50 years)</td>
+                            <td>कभी पूरी तरह नहीं (Life-long)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gametogenesis Process</strong></td>
+                            <td>Oogenesis (जन्म से पहले शुरू हो जाता है)</td>
+                            <td>Spermatogenesis (Puberty से शुरू होता है)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Urethra Function</strong></td>
+                            <td>केवल Urine के लिए अलग रास्ता</td>
+                            <td>Common pathway (Urine + Semen)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Developmental Origin</strong></td>
+                            <td>Müllerian Ducts</td>
+                            <td>Wolffian Ducts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🆚 Detailed Comparison</div>
+                <div class="footer-tag">📝 EXAM MUST KNOW</div>
+                <div class="footer-tag">📊 Direct PYQ format</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 23: HIGH-YIELD VIVA & EXAM ==================== -->
+        <section class="slide">
+            <div class="slide-number">23 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">High-Yield Viva & Exam Qs 🎙️</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Most Asked One-Liners</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">💡</span>Anatomy Gems</div>
+                            <ul class="point-list">
+                                <li>Normal position of Uterus? <strong>Anteverted and Anteflexed</strong>.</li>
+                                <li>Site of Fertilization? <strong>Ampulla of Fallopian Tube</strong>.</li>
+                                <li>Longest part of fallopian tube? <strong>Ampulla</strong>.</li>
+                                <li>Thickest layer of Uterus? <strong>Myometrium</strong>.</li>
+                                <li>Epithelium of Vagina? <strong>Stratified squamous non-keratinized</strong>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⚡</span>Physiology Gems</div>
+                            <ul class="point-list">
+                                <li>Hormone responsible for Ovulation? <strong>LH (Luteinizing Hormone Surge)</strong>.</li>
+                                <li>Which hormone maintains pregnancy? <strong>Progesterone</strong>.</li>
+                                <li>Milk ejection hormone? <strong>Oxytocin</strong> (Let-down reflex).</li>
+                                <li>Milk production hormone? <strong>Prolactin</strong>.</li>
+                                <li>Hormone tested in Pregnancy Kit? <strong>hCG (Human Chorionic Gonadotropin)</strong>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Viva Rapid Fire 🔥</h4>
+                        <p style="margin-bottom: 12px;"><strong>Q: What is Corpus Luteum?</strong><br>A: Ovulation के बाद फटा हुआ follicle जो Progesterone बनाता है।</p>
+                        <p style="margin-bottom: 12px;"><strong>Q: Why is Vagina acidic?</strong><br>A: Doderlein's bacilli (Lactobacillus) glycogen को Lactic acid में बदलते हैं (protection from infection)।</p>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Important Numbers 🔢</h4>
+                        <div class="badge-grid" style="grid-template-columns: 1fr;">
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>Day 14:</strong> Time of Ovulation</div>
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>280 Days:</strong> Gestation period</div>
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>4.5 or less:</strong> Normal Vaginal pH</div>
+                            <div class="badge" style="text-align: left; padding: 10px;"><strong>23:</strong> Chromosomes in Ovum</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🎙️ Viva Prep</div>
+                <div class="footer-tag">💡 One-Liners</div>
+                <div class="footer-tag">🔢 Exam Facts</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 24: SUMMARY & REVISION ==================== -->
+        <section class="slide">
+            <div class="slide-number">24 / 25</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Summary & Revision 📚</div>
+            </div>
+            <div class="slide-content">
+                <div style="width: 100%; display: flex; flex-direction: column; gap: 25px;">
+                    <div class="info-card" style="background: #f9fafb;">
+                        <h4>🎯 PYQ Focus Topics</h4>
+                        <div class="badge-grid">
+                            <div class="badge">Ovary Structure</div>
+                            <div class="badge">Menstrual Cycle</div>
+                            <div class="badge">LH Surge</div>
+                            <div class="badge">Pap Smear (DMLT)</div>
+                            <div class="badge">Uterus Layers</div>
+                            <div class="badge">Fertilization Site</div>
+                            <div class="badge">Placenta & hCG</div>
+                            <div class="badge">Oogenesis stages</div>
+                            <div class="badge">PCOS vs Normal</div>
+                            <div class="badge">Corpus Luteum</div>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="info-card">
+                            <h4>Hormone Mnemonics 🏷️</h4>
+                            <ul style="list-style-type: '▸'; padding-left: 20px; line-height: 1.8;">
+                                <li><strong>O</strong>xy<strong>to</strong>cin = <strong>O</strong>ut of <strong>to</strong>wn (Milk Out / Baby Out).</li>
+                                <li><strong>PRO</strong>lactin = <strong>PRO</strong>duction of milk.</li>
+                                <li><strong>E</strong>strogen = <strong>E</strong>ndometrial proliferation.</li>
+                                <li><strong>PRO</strong>gesterone = <strong>PRO</strong>tects pregnancy.</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h4>Pathways Recap 🔑</h4>
+                            <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 5px;">
+                                <div style="padding: 12px; background: #f9fafb; border-left: 4px solid var(--primary); border-radius: 8px;">
+                                    <strong style="color: var(--primary-dark);">Ovum Pathway:</strong><br>
+                                    <span style="font-size: 15px;">Ovary → Fimbriae → Ampulla (fertilization) → Uterus → Implantation.</span>
+                                </div>
+                                <div style="padding: 12px; background: #f9fafb; border-left: 4px solid #db2777; border-radius: 8px;">
+                                    <strong style="color: #be185d;">Menstrual Flow Pathway:</strong><br>
+                                    <span style="font-size: 15px;">Uterus cavity → Internal Os → Cervical canal → External Os → Vagina → Out.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">📚 Final Revision</div>
+                <div class="footer-tag">🎯 Quick Recap</div>
+                <div class="footer-tag">⭐ Exam Essentials</div>
+                <div class="footer-tag">🏆 आप तैयार हैं!</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 25: FINAL WORDS ==================== -->
+        <section class="slide final-slide">
+            <div class="slide-number">25 / 25</div>
+            <div class="final-slide-content">
+                <h2>Welcome to Prepe</h2>
+                <h3>अपनी तैयारी को नई उड़ान दें!</h3>
+                <p>हमारे अन्य बेहतरीन कोर्सेस भी देखें।</p>
+                
+                <div class="final-slide-grid">
+                    <!-- Box 1: Offer -->
+                    <a href="https://offer.prepeai.in" class="final-slide-box" target="_blank" rel="noopener noreferrer">
+                        <div class="icon offer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                        </div>
+                        <h4>FLAT 50% OFF</h4>
+                        <span>Limited Time Offer</span>
+                    </a>
+                    
+                    <!-- Box 2: Courses -->
+                    <a href="https://shop.prepeai.in" class="final-slide-box" target="_blank" rel="noopener noreferrer">
+                        <div class="icon courses">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h4>Explore More Courses</h4>
+                        <span>Expand Your Knowledge</span>
+                    </a>
+                    
+                    <!-- Box 3: Instagram -->
+                    <a href="https://insta.prepeai.in" class="final-slide-box insta-box" target="_blank" rel="noopener noreferrer">
+                        <div class="icon insta">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                        <h4>Follow on Instagram</h4>
+                        <span>@prepe.ai</span>
+                    </a>
+                </div>
+                
+                <div class="final-slide-divider"></div>
+                
+                <a href="https://www.prepeai.in" class="final-slide-button" target="_blank" rel="noopener noreferrer">
+                    Visit Our Website
+                </a>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
